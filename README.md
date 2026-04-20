@@ -1,20 +1,42 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# sh4d0w121 | Technical Research Blog
 
-# Run and deploy your AI Studio app
+A clean, minimalistic blog platform for cybersecurity research, CTF writeups, and technical deep dives.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/91d39e12-bee0-4eae-a55a-86c27a186c19
+- **Technical Reading Experience**: Optimized typography (Outfit & Inter) and spacious layout.
+- **Markdown Powered**: Posts are written in Markdown with support for code blocks.
+- **Developer Tools**: Syntax highlighting with `react-syntax-highlighter` and integrated copy-to-clipboard functionality.
+- **Dynamic Content**: Auto-generated Table of Contents and tag-based filtering.
+- **Dual Themes**: Native light and dark mode support with system preference detection.
+- **Page Transitions**: Smooth, non-distracting animations using `motion`.
 
-## Run Locally
+## Tech Stack
 
-**Prerequisites:**  Node.js
+- **Framework**: React 19 + Vite
+- **Styling**: Tailwind CSS 4
+- **Routing**: React Router 7
+- **Content**: React Markdown + Rehype-Slug
+- **Icons**: Lucide React
 
+## Structure
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+```text
+src/
+├── components/   # Reusable UI elements
+├── data/         # Blog post storage (posts.ts)
+├── hooks/        # Theme and utility hooks
+├── lib/          # Helper functions (cn utility)
+├── pages/        # Main route components
+└── types/        # TypeScript interfaces
+```
+
+## Setup
+
+1. Install dependencies: `npm install`
+2. Run development server: `npm run dev`
+3. Build for production: `npm run build`
+
+---
+
+Built by **Pranil Gholap (sh4d0w121)**.
