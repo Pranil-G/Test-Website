@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Professional Cool Colors */
+  --color-brand-50: #f0f9ff;
+  --color-brand-100: #e0f2fe;
+  --color-brand-200: #bae6fd;
+  --color-brand-500: #0ea5e9;
+  --color-brand-600: #0284c7;
+  --color-brand-700: #0369a1;
+  --color-brand-900: #0c4a6e;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 dark:bg-[#0a0c10] dark:text-slate-200 transition-colors duration-300 antialiased;
+  }
+}
+
+/* More professional prose styles */
+.markdown-body {
+  @apply leading-7 text-[17px] max-w-none prose prose-slate dark:prose-invert prose-headings:font-display prose-headings:tracking-tight;
+}
+
+.markdown-body h1, .markdown-body h2, .markdown-body h3 {
+  @apply font-display font-semibold text-slate-900 dark:text-white mb-6 mt-12;
+}
+
+.markdown-body code:not(pre code) {
+  @apply bg-blue-50 dark:bg-blue-900/20 px-1.5 py-0.5 rounded text-[0.9em] font-mono text-blue-600 dark:text-blue-400 font-medium;
+}
+
+.markdown-body pre {
+  @apply rounded-xl border border-slate-200 dark:border-slate-800/50 my-8 overflow-hidden bg-white dark:bg-[#0d1117] shadow-sm;
+}
+
+.markdown-body ul, .markdown-body ol {
+  @apply mb-6 pl-6;
+}
+
+.markdown-body li {
+  @apply mb-2;
+}
